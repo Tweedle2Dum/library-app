@@ -46,13 +46,21 @@ header > .buttons > button{
 
 }
 
+button[type="submit"]{
+    padding: 1rem;
+    background-color: #4285F4;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    box-shadow: 0 0 0.3rem var(--shadow);
+    width: 100px;
+}
 
-
-.login:hover,.add-book:hover{
+.login:hover,.add-book:hover,button[type="submit"]:hover{
     background-color: #83adf0;
 }
 
-.login:active,.add-book:active{
+.login:active,.add-book:active,button[type="submit"]:active{
     background-color: rebeccapurple;
 }
 
@@ -64,12 +72,10 @@ main{
 
 .grid-container{
     padding: 0.5rem;
-    box-shadow:0 0 0.3rem var(--shadow) ;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     justify-items: center;
     gap: 1rem;
-    border-radius: 1rem;
     
     
 }
@@ -82,13 +88,16 @@ input[type="checkbox"]{
 }
 
 
-div.card{
 
-    background-color: bisque;
+
+
+div.card{
+    background: linear-gradient(45deg,rgb(35, 179, 192),rgba(255, 255, 255, 0.985));
     display: flex;
     flex-flow: column wrap;
     border-radius: 1rem;
-    border: 2px solid var(--shadow);
+    border: 0;
+    box-shadow: 0 0 5px var(--shadow);
     align-items: center;
     padding: 0.5rem;
     
@@ -109,18 +118,42 @@ div.card{
 
 .form-container{
     position: fixed;
-    max-width: 100ch;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
+    margin: 0;
+    height: 400px;
+    padding: 1rem;
     
 }
+
+dialog{
+    border: 0;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
 form{
-
+    height: 100%;
+    width: 100%;
     display: grid;
-    justify-content: center;
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+    align-items: center; 
+    overflow: hidden;   
+    
+}
 
-
+form>label{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
