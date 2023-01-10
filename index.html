@@ -7,7 +7,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js"></script>
+    <script  defer src="./script.js"></script>
 
 
 </head>
@@ -17,8 +17,8 @@
 
         <h1 class="logo">my Local Library</h1>
         <div class="buttons">
-            <button class="login">Login</button>
-            <button class="add-book">Add Book</button>
+            <button class=" button login">Login</button>
+            <button class=" button add-book">Add Book</button>
         </div>
     </header>
 
@@ -77,7 +77,7 @@
         </div>
 
 
-        <dialog class="form-container">
+        <dialog class="form-container" id="modal">
 
             <form method="dialog">
                 <label for="name">Name of the Book: <input type="text" id="name" name="name" required></label>
