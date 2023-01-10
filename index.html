@@ -18,7 +18,7 @@
         <h1 class="logo">my Local Library</h1>
         <div class="buttons">
             <button class=" button login">Login</button>
-            <button class=" button add-book">Add Book</button>
+            <button class=" button add-book">New Book</button>
         </div>
     </header>
 
@@ -31,7 +31,8 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
-                
+                <button class="buttons remove">Remove</button>
+
             </div>
             <div class="card">
                 <img src="./images-icons/book.jpg" alt="" srcset="">
@@ -39,7 +40,8 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
-                
+                <button class="buttons remove">Remove</button>
+
             </div>
             <div class="card">
                 <img src="./images-icons/book.jpg" alt="" srcset="">
@@ -47,7 +49,8 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
-                
+                <button class="buttons remove">Remove</button>
+
             </div>
             <div class="card">
                 <img src="./images-icons/book.jpg" alt="" srcset="">
@@ -55,7 +58,8 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
-                
+                <button class="buttons remove">Remove</button>
+
             </div>
             <div class="card">
                 <img src="./images-icons/book.jpg" alt="" srcset="">
@@ -63,7 +67,8 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
-                
+                <button class="buttons remove">Remove</button>
+
             </div>
             <div class="card">
                 <img src="./images-icons/book.jpg" alt="" srcset="">
@@ -71,6 +76,7 @@
                 <p>Author: woof</p>
                 <p>Pages: 69</p>
                 <label for="status">Read: <input type="checkbox" id="status"></label>
+                <button class="buttons remove">Remove</button>
                 
             </div>
             
@@ -79,12 +85,13 @@
 
         <dialog class="form-container" id="modal">
 
-            <form method="dialog">
+            <form method="post" action="">
                 <label for="name">Name of the Book: <input type="text" id="name" name="name" required></label>
                 <label for="author">Name of the Author: <input type="text" id="author" name="author"></label>
-                <label for="pages">No. of pages: <input type="tel" id="pages" name="pages"></label>
+                <label for="pages">No. of pages: <input type="tel" id="pages" name="pages" required></label>
                 <label for="form-status">Have you read the book? <input type="checkbox" id="form-status" name="status" required></label>
                 <button type="submit">Add Book</button>
+                <button type="reset">Cancel</button>
             </form>
         </dialog>
 

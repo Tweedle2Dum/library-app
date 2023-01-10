@@ -46,7 +46,7 @@ header > .buttons > button{
 
 }
 
-button[type="submit"]{
+button{
     padding: 1rem;
     background-color: #4285F4;
     border: 0;
@@ -56,11 +56,11 @@ button[type="submit"]{
     width: 100px;
 }
 
-.login:hover,.add-book:hover,button[type="submit"]:hover{
+button[type="reset"]:hover,.login:hover,.add-book:hover,button[type="submit"]:hover,.remove:hover{
     background-color: #83adf0;
 }
 
-.login:active,.add-book:active,button[type="submit"]:active{
+button[type="reset"]:active,.login:active,.add-book:active,button[type="submit"]:active,.remove:active{
     background-color: rebeccapurple;
 }
 
@@ -82,17 +82,19 @@ main{
 
 
 input[type="checkbox"]{
-    transform: scale(2);
-    padding:10px;
     margin-left: 0.5rem;
+}
+
+input:invalid{
+    border-style: dotted;
+    border-color: lightcoral;
+    
 }
 
 
 
 
-
 div.card{
-    background: linear-gradient(45deg,rgb(35, 179, 192),rgba(255, 255, 255, 0.985));
     display: flex;
     flex-flow: column wrap;
     border-radius: 1rem;
@@ -100,6 +102,7 @@ div.card{
     box-shadow: 0 0 5px var(--shadow);
     align-items: center;
     padding: 0.5rem;
+    gap: 20px;
     
 }
 
@@ -122,7 +125,7 @@ div.card{
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0;
-    height: 400px;
+    height: 500px;
     padding: 1rem;
     
 }
@@ -144,7 +147,7 @@ form{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
     justify-items: center;
     align-items: center; 
     overflow: hidden;   
