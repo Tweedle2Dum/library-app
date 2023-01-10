@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 
@@ -47,8 +48,12 @@ header > .buttons > button{
 
 
 
-header > button:hover {
+.login:hover,.add-book:hover{
     background-color: #83adf0;
+}
+
+.login:active,.add-book:active{
+    background-color: rebeccapurple;
 }
 
 
@@ -101,6 +106,22 @@ div.card{
     margin-top: 0.5rem;
 }
 
+
+.form-container{
+    position: fixed;
+    max-width: 100ch;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+form{
+
+    display: grid;
+    justify-content: center;
+
+
+}
 
 
 footer{
