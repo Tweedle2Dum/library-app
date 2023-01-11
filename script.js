@@ -46,17 +46,26 @@ function renderBooks(index) {
     input.type = "checkbox";
     input.id = "status";
     input.checked=books[index].read;
+    input.disabled=true;
     label.appendChild(input);
 
     div.appendChild(label);
 
-    //Created the button and applied event listener to it
-    const button = document.createElement("button");
-    button.classList.add("buttons")
-    button.classList.add("remove");
-    button.textContent = "Remove";
-    applyListener(button);
-    div.appendChild(button);
+    //Created the  remove button and applied event listener to it
+    const rbutton = document.createElement("button");
+    rbutton.classList.add("buttons")
+    rbutton.classList.add("remove");
+    rbutton.textContent = "Remove";
+    applyListener(rbutton);
+    div.appendChild(rbutton);
+
+    //Created the modify button and applied event listener to it 
+    const mbutton = document.createElement("button");
+    mbutton.classList.add("buttons");
+    mbutton.classList.add("modify");
+    mbutton.textContent=" Change Read Status";
+    applyListener(mbutton);
+    div.appendChild(mbutton);
 
     console.log(div);
 
@@ -85,10 +94,28 @@ function getBookFromInput() {
 
 //Applies Event Listener to Remove Button on card when called inside renderBooks()
 function applyListener(button) {
-        button.addEventListener("click", (e) => {
-            console.log(e);
-            e.target.parentElement.remove()
-        })
+        if(button.classList[1]==="remove"){
+            button.addEventListener("click", (e) => {
+                console.log(e);
+                e.target.parentElement.remove()
+                
+            })
+        }
+        
+        if(button.classList[1]==="modify"){
+            button.addEventListener("click",(e)=>{
+                console.log(e);
+                let box = e.target.parentElement.querySelector("input");
+                console.log(box.checked)
+
+                if(box.checked===true){
+                    box.checked=false;
+                    return;
+                }
+                box.checked=true;
+            })
+        }
+        
     }
 
 

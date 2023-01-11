@@ -57,11 +57,11 @@ button{
     width: 100px;
 }
 
-button[type="reset"]:hover,.login:hover,.add-book:hover,button[type="submit"]:hover,.remove:hover{
+button[type="reset"]:hover,.login:hover,.add-book:hover,button[type="submit"]:hover,.remove:hover,.modify:hover{
     background-color: #83adf0;
 }
 
-button[type="reset"]:active,.login:active,.add-book:active,button[type="submit"]:active,.remove:active{
+button[type="reset"]:active,.login:active,.add-book:active,button[type="submit"]:active,.remove:active,.modify:active{
     background-color: rebeccapurple;
 }
 
